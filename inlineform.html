@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins&display=swap" rel="stylesheet">
+    <style>
+    :root{
+       --main-color:#FFFEFF;
+       --container-color:#aff6d8;
+    }
+        body{
+            background-color: var(--container-color);
+    display: flex;
+    justify-content: center;
+    height: 99vh;
+    align-items: center;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+
+        }
+    .main-container{
+    width: 550px;
+    height: 360px;
+    margin: 0 auto;
+   
+    display: flex;
+    font-family:'Roboto',sans-serif;
+    animation:formam 1.2s ease-in forwards;
+    
+    
+   
+    }
+
+@keyframes formam{
+
+    0%{
+        opacity:0.3;
+        transform: translate3d(20px, -100px, 0px);
+
+    }
+
+    50%{
+        opacity:0.5;
+        transform: translate3d(0px, -50px, 0px);
+       
+    }
+
+    75%{
+        opacity:0.8;
+         transform: translate3d(0px, -30px, 0px);
+       
+    }
+    
+    100%{
+        opacity:1;
+        transform: translate3d(0px, 10px, 0px);
+
+    }
+
+}
+    .form{
+        width: 275px;
+        height: 360px;
+        margin: 0 auto;
+    background-color:#FFFEFF; 
+    text-align: center;
+    box-shadow: 0px 2px 5px 3px #FFFEFF;
+    margin-left: -8px;
+    border-radius:0px 10px 10px 0px;
+    }
+    input{
+        font-size:16px;
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 8px;
+    line-height: 45px;
+    caret-color: #17A087;
+    position: relative;
+    width:147px;
+    outline: none;
+
+    }
+   
+
+    ::placeholder{
+        color:#e7e7e7;
+
+        
+    }
+    .form button{
+        width:115px;
+        height:35px;
+        background-image:linear-gradient(to right,#f5bc48,#f5c831);
+        color:white;
+        border:1px solid #f5bc48;
+        margin-top: 25px;
+        border-radius: 20px;
+        letter-spacing:1px;
+        font-size:18px;
+        display: flow-root;
+    margin-left: 61px;   
+    position: relative;     
+    overflow: hidden;
+    font-family:'Poppins',sans-serif;
+ 
+
+    }
+    .social-media{
+        width: 277px;
+        margin: -30px auto;
+        text-align: center;
+        background-image: linear-gradient( 26deg , #18c27b 20%,#4fcda7 80%);
+        box-shadow: -2px 0px 4px 3px #7ae3ba;
+     border-radius: 10px 60px 60px 10px;
+     border:2px solid #4fcda7;
+     height: 415px;
+     z-index: 1;
+    
+    }
+    .social-media  h6{
+        color: white;
+    letter-spacing: 1px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    height:80%;
+    align-items: center;
+    }
+   button::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -15px;
+    right: 0px;
+    background-color: #aff6d8;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateY(-19px);
+    }
+    
+ 
+button:hover::before{
+transition: all 1.5s ease;
+    transform: translateY(16px);
+    opacity:0.5;
+    
+
+} 
+   input:focus::placeholder{
+     transform:translateY(-40%);
+     z-index:-1;
+     transition:transform 1s ease;
+     color:#61e6b1;
+   }
+   input:focus {
+       border-bottom :1px solid #61e6b1;
+   }
+   ::selection{
+    background-color:#17A087;
+   }
+    </style>
+</head>
+<body>
+    <!-- container for left side st-->
+    <div class="main-container">
+       
+        <div class="social-media">
+            <h6 style="color:white;letter-spacing: 1px; font-size:20px"> Join me for Daily update related to UX/UI </h4>
+        </div>
+        <div class="form" ">
+            <h4 style="letter-spacing: 1px;color:#464E5E;">Sign up</h4>
+             <form method="post">
+                 <input type="text" placeholder="Username" required>
+                 <input type="email" placeholder="E-mail" required>
+                 <input type="password" placeholder="Password" required>
+               
+                 <button>SIGN UP</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
